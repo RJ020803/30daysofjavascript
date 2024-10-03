@@ -119,5 +119,85 @@ function sumAllNums(){
   sumAllNums(1,2,3,4)
 
   
+  //function declaration 
+
+  function sumAllNums(){
+    let sum=0;
+    for(let i=0;i<arguments.length;i++){
+      sum+=arguments[i]
+    }
+    return sum
+  }
+  console.log(sumAllNums(1,2,3,4,,5));
+  console.log(sumAllNums(10,20,13,40));
+  console.log(sumAllNums(15,20,30,25,10,33));
+
+  //unlimited number of parameters in arrow function 
+  const sumAllNums=(...args)=>{
+    //console.log(arguments),arguments object not found in arrow function ;
+    //instead we use a parameter followed by spread operator(...)
+    console.log(args);
+  }
+  sumAllNums(1,2,3,4)
+
+
+  //forEach loops in array
+  //arr.forEach(callBackFunction)
+
+  arr.forEach(val)=>{
+    console.log(val);
+    
+  }
+  //this works as for each function in javascript
+
+  let arr =['pune','delhi','mumbai'];
+  arr.forEach((val,idx))=>{
+    console.log(val.toUpperCase(),idx,arr);
+    
+  }
+
+  function areaofcircle(r){
+    let area=Math.PI*r*r
+    return area
+  }
+  console.log(areaofcircle(10));
+
+
+  function sumTwoNumbers(numone,numtwo){
+    let sum=numone+numtwo
+    return sum
+  }
+  console.log(sumTwoNumbers(10,20));
+
+function sumArrayValues(arr){
+  let sum=0;
+  for(let i=0;i<arr.length;i++){
+    sum=sum+arr[i];
+  }
+  return sum;
+}
+
+//arrow function 
+const areaOfCircle=(radius)=>{
+  let area=Math.PI*radius*radius;
+  return area;
+}
+console.log(areaofcircle(10));
+
+//function with unlimited number of parameters 
+//unlimited number of parameters in regular function
+function sumAllNums(){
+  console.log(arguments);
+}
+sumAllNums(1,2,3,4)
+
+
+
+
+
+  
+  
+
+
   
 
